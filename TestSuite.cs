@@ -106,7 +106,7 @@ namespace MasterClassTestAutomation
                 driver.FindElements(By.XPath("//*[@class= 'form-control']"));
 
 
-            listOfElements.First().SendKeys(dataFromDb.First().TextInput);
+            listOfElements.First().SendKeys(reader.FirstOrDefault()?.ElementAt(2).Value.ToString());
 
             listOfElements.ElementAt(1).SendKeys(reader.FirstOrDefault()?.ElementAt(3).Value.ToString());
 
