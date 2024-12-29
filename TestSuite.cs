@@ -89,14 +89,14 @@ namespace MasterClassTestAutomation
             //Deserilize
             var dataFromDb = reader.Select(db => new ColName()
             {
-                 Id = (int)db["Id"],
+                 Id = Convert.ToInt32(db["Id"]),
                  Url = (string)db["Url"],
                  TextInput = (string)db["TextInput"],
                  Password = (string)db["Password"],
                  TextArea = (string)db["TextArea"],
                  DropDown = (string)db["DropDown"],
                  DataList = (string)db["DataList"],
-                 Range = (int)db["Range"]
+                 Range = Convert.ToInt32(db["Range"])
             });
 
             driver.Navigate()
@@ -139,14 +139,14 @@ namespace MasterClassTestAutomation
 
             var db = reader.Select(x => new ColName 
             {
-                Id = (int)x["Id"],
+                Id = Convert.ToInt32(x["Id"]),
                 Url = (string)x["Url"],
                 TextInput = (string)x["TextInput"],
                 Password = (string)x["Password"],
                 TextArea = (string)x["TextArea"],
                 DropDown = (string)x["DropDown"],
                 DataList = (string)x["DataList"],
-                Range = (int)x["Range"],
+                Range = Convert.ToInt32(x["Range"]),
             });//Deserialization
 
             driver.Navigate()
